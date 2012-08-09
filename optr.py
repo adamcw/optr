@@ -68,7 +68,7 @@ class Options(object):
                 val = self.__update_dict(odict[attr], val)
         
             odict.update({attr: val})
- 
+
         return odict
  
     def __resolve_groups(self, groups, opts=None):
@@ -83,4 +83,5 @@ class Options(object):
     def __str__(self): return str(self.__opts)
     def __getattr__(self, i): return self.__opts[i]
     def __getitem__(self, i): return self.__opts[i]
+    def __cmp__(self, dict): return cmp(self.__opts, dict)
 
