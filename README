@@ -1,6 +1,6 @@
 # BASIC USAGE
 
-	from options import Options
+	from optr import Options
 
 	# Don't allow any features by default
 	default = dict(
