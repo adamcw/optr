@@ -16,10 +16,12 @@ class Options(object):
 
         self.__argmap = argmap or {}
         self.__opts = {}
-
-        self._add(default)
+    
+        default = default if default is not None else {}
         self.__groups = {self.__default_name: default}
         self.__groups.update(groups)
+        
+        self._add(default)
 
     def _add(self, ndict):
         self.__update_dict(self.__opts, ndict) 
@@ -45,9 +47,9 @@ class Options(object):
             odict.update(mixin)
 
         # Sort so that all advanced functions execute first
+        # as they may be overwritten by non-advanced functions
         opts = sorted(ndict.items(), key=lambda t: t[0] not in self.__argmap)
 
-        # Now resolve any advanced arguments
         for attr, val in opts:
             if attr == self.__mixin_attr:
                 continue
