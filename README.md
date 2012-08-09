@@ -181,7 +181,7 @@
 	adamcw:tests adamcw$ coverage run ./tests_optr.py 
 	.........
 	----------------------------------------------------------------------
-	Ran 9 tests in 0.002s
+	Ran 10 tests in 0.002s
 
 	OK
 
@@ -189,10 +189,10 @@
 	Name                                     Stmts   Miss  Cover   Missing
 	----------------------------------------------------------------------
 	/lib/python/optr/__init__					1       0   100%   
-	/lib/python/optr/optr						51      1    98%   42
-	tests_optr                                  58      0   100%   
+	/lib/python/optr/optr						51      0   100%   
+	tests_optr                                  62      0   100%   
 	----------------------------------------------------------------------
-	TOTAL                                      110      1    99%  
+	TOTAL                                      114      0   100%  
 
 # License
 

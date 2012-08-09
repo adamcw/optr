@@ -109,6 +109,11 @@ class OptrTestCase(unittest.TestCase):
 
         self.assertEquals(self.o, q)
 
+    def test_add_non_dict(self):
+        self.o._add('')
+        q = {'write': False, 'read': False, 'create': False, 'delete': False}
+        self.assertEqual(self.o, q)
+
     def test_advanced_arg(self):
         q = {'sound': {'REALTEK_DRIVER_0.0.1': '__SOUND_FILTER_ON', 'LOUD': 'very'}}
         self.o = Options(groups=self.adv_groups, default=self.adv_default, argmap=self.adv_argmap) 
