@@ -1,5 +1,9 @@
 # Optr
 
+Optr allows you to create CSS-esque inheritance for options in Python. It allows you to define groups of options that can inherit from one another, and provides a way to tame complex option hierarchies. 
+
+At its most basic form it allows for the recursive merging of dictionaries, however it also provides advanced functionality such as inheritance, mapping pseudo-arguments to groups of options, and restoration of default values.
+
 # BASIC USAGE
 
 	from optr import Options
