@@ -1,3 +1,5 @@
+import copy
+
 class Options(object):
     
     def __init__(self, groups, default=None, argmap=None):
@@ -17,7 +19,7 @@ class Options(object):
         self.__argmap = argmap or {}
         self.__opts = {}
     
-        default = default if default is not None else {}
+        default = copy.deepcopy(default) if default is not None else {}
         self.__groups = {self.__default_name: default}
         self.__groups.update(groups)
         
